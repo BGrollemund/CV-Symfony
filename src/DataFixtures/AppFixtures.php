@@ -61,7 +61,7 @@ class AppFixtures extends Fixture
             [
                 'CV PDF',
                 '<i class="fas fa-file-pdf fa-lg fa-fw"></i>',
-                'cvPdf/CV-BGrollemund.pdf'
+                'https://bgrollemund.github.io/cvPdf/CV-BGrollemund.pdf'
             ]
         ];
 
@@ -157,7 +157,7 @@ class AppFixtures extends Fixture
             [
                 'Gestionnaire de Planning',
                 '<i class="fab fa-js fa-fw fa-lg"></i>',
-                'PlanningManager/index.html'
+                'https://bgrollemund.github.io/PlanningManager/index.html'
             ],
             /*
             [
@@ -169,12 +169,12 @@ class AppFixtures extends Fixture
             [
                 'Démo Symfony',
                 '<i class="fab fa-symfony fa-fw fa-lg"></i>',
-                'https://github.com/BGrollemund/Demo-Symfomy'
+                'https://github.com/BGrollemund/Demo-Symfony'
             ],
             [
                 'CV Symfony',
                 '<i class="fab fa-symfony fa-fw fa-lg"></i>',
-                'https://github.com/BGrollemund/CV-Symfomy'
+                'https://github.com/BGrollemund/CV-Symfony'
             ]
         ];
 
