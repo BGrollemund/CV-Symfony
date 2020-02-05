@@ -1,0 +1,12 @@
+{% for key, experience in experiences %}
+    <li><span>{{ experience.title }}</span>
+        <ul>
+            <li>{{ experience.details }}</li>
+        </ul>
+    </li>
+    {% if experiences|length != key + 1 %}
+        <hr>
+    {% endif %}
+{% endfor %}
+
+<i class="fas fa-briefcase"></i>

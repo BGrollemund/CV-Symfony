@@ -1,0 +1,10 @@
+<div class="in-progress">
+    <ul>
+        <li>En cours :</li>
+        {% for progress in in_progress %}
+            <li>
+                {{ progress.icon | raw }} {{ progress.name }}
+            </li>
+        {% endfor %}
+    </ul>
+</div>

@@ -1,0 +1,22 @@
+{% for key, skill_type in skill_types %}
+    {% if key is even %}
+        <li>
+    {% else %}
+        <hr>
+    {% endif %}
+    <div><span>{{ skill_type.name }}</span>
+        <ul>
+            {% for skill in skills[key] %}
+                <li>{{ skill.name }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% if key is odd %}
+        </li>
+        {% if skill_types|length != key + 1 %}
+            <hr>
+        {% endif %}
+    {% endif %}
+{% endfor %}
+
+<i class="far fa-star"></i>

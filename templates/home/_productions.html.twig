@@ -1,0 +1,13 @@
+<h2>Réalisations</h2>
+<ul>
+    {% for key, production in productions %}
+        <a href="{{ production.link }}" target="_blank">
+            <li>
+                {{ production.icon | raw }} {{ production.name }}
+            </li>
+        </a>
+        {% if productions|length != key + 1 %}
+            <hr>
+        {% endif %}
+    {% endfor %}
+</ul>

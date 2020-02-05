@@ -1,0 +1,12 @@
+{% for key, formation in formations %}
+    <li><span>{{ formation.title }}</span>
+        <ul>
+            <li>{{ formation.details }}</li>
+        </ul>
+    </li>
+    {% if formations|length != key + 1 %}
+        <hr>
+    {% endif %}
+{% endfor %}
+
+<i class="fas fa-graduation-cap"></i>

@@ -1,0 +1,12 @@
+<ul>
+    {% for key, contact in contacts %}
+        <a href="{{ contact.link }}" target="_blank">
+            <li>
+                {{ contact.icon | raw }} {{ contact.name }}
+            </li>
+        </a>
+        {% if contacts|length != key + 1 %}
+            <hr>
+        {% endif %}
+    {% endfor %}
+</ul>

@@ -1,0 +1,75 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1><span id="title-1">&nbsp;</span><span id="title-2">&nbsp;</span></h1>
+
+    <div class="container">
+        <aside>
+            <div id="aside-left">
+                {{ include( 'home/_inProgress.html.twig', { in_progress : in_progress } ) }}
+                {{ include('home/_productions.html.twig', { productions : productions } ) }}
+            </div>
+        </aside>
+
+        <main id="main">
+            <nav id="nav-menu">
+                <ul>
+                    <li id="nav-menu-1" class="nav-menu init-hidden hidden">A propos</li>
+                    <li id="nav-menu-2" class="nav-menu">Compétences</li>
+                    <li id="nav-menu-3" class="nav-menu">Formations</li>
+                    <li id="nav-menu-4" class="nav-menu">Expériences</li>
+                </ul>
+            </nav>
+
+            <div id="main-content">
+                <div class="main-details">
+                    <ul id="ul-main-1" class="ul-main">
+                        {{ include('home/_aboutHidden.html.twig', { about : about } ) }}
+                        <div id="board-part-1" class="board-part rotate"></div>
+                    </ul>
+
+                    <ul id="ul-main-2" class="ul-main">
+                        {{ include('home/_skills.html.twig', { skills : skills, skill_types : skill_types } ) }}
+                        <div id="board-part-2" class="board-part rotate"></div>
+                    </ul>
+                </div>
+
+                <div class="main-details">
+                    <ul id="ul-main-3" class="ul-main">
+                        {{ include('home/_formations.html.twig', { formations : formations } ) }}
+                        <div id="board-part-3" class="board-part rotate"></div>
+                    </ul>
+
+                    <ul id="ul-main-4" class="ul-main">
+                        {{ include('home/_experiences.html.twig', { experiences : experiences } ) }}
+                        <div id="board-part-4" class="board-part rotate"></div>
+                    </ul>
+                </div>
+
+                <h3 id="view-anim">
+                    <i class="fas fa-cog fa-spin"></i>
+                    <div>Démo<br>Animation<br>JS</div>
+                </h3>
+
+                {{ include('home/_chessPieces.html.twig') }}
+            </div>
+        </main>
+
+        <aside>
+            <div id="aside-right">
+                <div>
+                    <h2>Bertrand Grollemund</h2>
+                    {{ include('home/_contacts.html.twig', { contacts : contacts } ) }}
+                </div>
+
+                <div class="init-hidden">
+                    <h3>A propos</h3>
+                    {{ include('home/_about.html.twig', { about : about } ) }}
+                </div>
+
+                <h3 id="view-games"><span>Voir les parties</span><span>Retour</span></h3>
+                {{ include('home/_gamesDetails.html.twig') }}
+            </div>
+        </aside>
+    </div>
+{% endblock %}
